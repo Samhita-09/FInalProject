@@ -5,16 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review Website</title>
     <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  
 </head>
 <body>
     <nav>
         <ul>
             <li class="title">Reviews</li>
-            <li id="nav"><a href="Book-Review/bookreview.html">Books</a></li>
+            <li>
+                <form id="item-form">
+                    <div class="form-control">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                        type="text"
+                        class="form-input"
+                        id="item-input"
+                        name="item"
+                        placeholder="Search"
+                        />
+                    </div>
+                </form>
+            </li>
+            <li id="nav"><a href="Book-review/bookreview.html">Books</a></li>
             <li id="nav"><a href="Movie-Review/moviereview.html">Movies</a></li>
             <li id="nav"><a href="Product-Review/productreview.html">Products</a></li>
         </ul>
     </nav>
+    
+    <h1 class="welcome">Welcome to Rated and Reviewed!</h1>
+
+    <h2 class="description">Use our website to leave a book, movie, or product review to let other users know what you think and whether they should spend their time and money on the item you reviewed.</h2>
+    
+    <div class="feature-container">
+        <div class="feature-card">
+            <a href="Book-review/bookreview.html">
+                <h4>Book Reviews</h4>
+                <p>Leave a review of a book you recently read!</p>
+            </a>
+        </div>
+        <div class="feature-card">
+            <a href="Movie-Review/moviereview.html">
+                <h4>Movie Reviews</h4>
+                <p>Leave a review of a movie you recently watched!</p>
+            </a>
+        </div>
+        <div class="feature-card">
+            <a href="Product-Review/productreview.html">
+                <h4>Product Review</h4>
+                <p>Leave a review of your purchased product!</p>
+            </a>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
+
