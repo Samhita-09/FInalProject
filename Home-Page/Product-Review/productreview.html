@@ -3,11 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Review Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li class="title">Reviews</li>
+            <li>
+                <form id="item-form">
+                    <div class="form-control">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                        type="text"
+                        class="form-input"
+                        id="item-input"
+                        name="item"
+                        placeholder="Search"
+                        />
+                    </div>
+                </form>
+            </li>
+            <!-- ask if there's a way to make this actually take us to the homepage -->
+            <li id="nav"><a href="#idk">Books</a></li>
+            <li id="nav"><a href="Movie-Review/moviereview.html">Movies</a></li>
+            <li id="nav"><a href="Product-Review/productreview.html">Products</a></li>
+        </ul>
+    </nav>
     
+    <h1 class="welcome">Product Reviews!</h1>
+
+    <h2 class="description">Leave a review for your purchased product.</h2>
+
+    <button class="addReview"><i class="fa-solid fa-plus"></i>Add your review</button>
+
+    <div class="feature-container">
+        <div class="feature-card">
+            <h1>CeraVe Daily Moisturizing Lotion</h1>
+            <div class="star">
+                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-regular fa-star"></i></p>
+            </div>
+            <p class="review">I've been using this lotion for weeks, and it's been a game-changer for my dry skin. It's lightweight, non-greasy, and absorbs quickly. The formula feels gentle and works well even on sensitive skin. I just wish it had a version with SPF included.</p>
+        </div>
+        <div class="feature-card">
+            <h1>Sony WH-1000XM5 Noise-Canceling Headphones</h1>
+            <div class="star">
+                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-regular fa-star"></i></p>
+            </div>
+            <p class="review">These headphones deliver incredible sound quality and top-tier noise cancellation. They're comfortable for long listening sessions and the battery life easily lasts all day. The touch controls take a little getting used to but are convenient once mastered. Definitely worth the investment for music lovers or frequent travelers.</p>
+        </div>
+        <div class="feature-card">
+            <h1> Product: iRobot Roomba i3+ EVO Vacuum</h1>
+            <div class="star">
+                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-regular fa-star"></i></p>
+            </div>
+            <p class="review">The Roomba i3+ does a solid job cleaning up pet hair and daily dust without much supervision. The self-emptying base is a huge convenience and reduces maintenance. It occasionally misses corners but overall keeps the floors tidy. Great for busy households wanting a hands-free cleaning option.</p>
+        </div>
+    </div>
+
+   <footer class="footer">
+        <h2 class="footer-title">Contact Us!</h2>
+        <div class="contact-info">
+            <p id="email">Email Address:</p>
+            <button class="email-btn" onclick="copyEmail()">samkal28@bergen.org</button>
+            <button class="email-btn" onclick="copyEmail()">julzag28@bergen.org</button>
+            <p id="number">Phone Number:</p>
+            <button id="number-btn">(551) 123-4567</button>
+        </div>
+   </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
