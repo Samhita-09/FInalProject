@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review Website</title>
     <link rel="stylesheet" href="style.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
     <nav>
@@ -42,23 +38,34 @@
     <div class="feature-container">
         <div class="feature-card">
             <a href="Book-review/bookreview.html">
-                <h4>Book Reviews</h4>
+                <h1>Book Reviews</h1>
                 <p>Leave a review of a book you recently read!</p>
             </a>
         </div>
         <div class="feature-card">
             <a href="Movie-Review/moviereview.html">
-                <h4>Movie Reviews</h4>
+                <h1>Movie Reviews</h1>
                 <p>Leave a review of a movie you recently watched!</p>
             </a>
         </div>
         <div class="feature-card">
             <a href="Product-Review/productreview.html">
-                <h4>Product Review</h4>
-                <p>Leave a review of your purchased product!</p>
+                <h1>Product Reviews</h1>
+                <p>Leave a review of a product you purchased recently!</p>
             </a>
         </div>
     </div>
+
+   <footer class="footer">
+        <h2 class="footer-title">Contact Us!</h2>
+        <div class="contact-info">
+            <p id="email">Email Address:</p>
+            <button class="email-btn" onclick="copyEmail()">samkal28@bergen.org</button>
+            <button class="email-btn" onclick="copyEmail()">julzag28@bergen.org</button>
+            <p id="number">Phone Number:</p>
+            <button id="number-btn">(551) 123-4567</button>
+        </div>
+   </footer>
 
     <script src="script.js"></script>
 </body>

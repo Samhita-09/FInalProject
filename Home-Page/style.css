@@ -43,11 +43,13 @@ nav ul {
 .welcome{
     text-align: center;
     padding: 1.5rem 0;
+    font-size: 4rem;
 }
 
 .description {
     text-align: center;
     padding: 0.25rem 0;
+    font-size: 2.5rem;
 }
 
 .form-input {
@@ -91,7 +93,7 @@ nav ul {
     border: 2px solid rgb(127, 172, 255);
     border-radius: 15px;
     box-shadow: 0 4px 6px rgb(79, 106, 157);
-    height: 300px;
+    height: 400px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
@@ -104,7 +106,7 @@ nav ul {
 
 .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 12px rgb(79, 106, 157);
 }
 
 .feature-card p {
@@ -113,9 +115,60 @@ nav ul {
     font-size: 1.3rem;
     max-width: 280px;
     margin: 0 auto;
-    text-decoration: none;
+    font-size: 27px;
 }
 
 .feature-card h1 {
     color: black;
+    padding-top: 50px;
+    font-size: 37px;
+}
+
+.feature-card,
+.feature-card * {
+  text-decoration: none;
+}
+
+.footer {
+    margin-top: 15px;
+    padding-bottom: 35px;
+    padding-top: 10px;
+    background-color: rgb(127, 172, 255);
+}
+
+.footer-title {
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+footer p {
+    padding-top: 10px;
+    margin-left: 40px;
+    margin-right: 20px;
+    font-size: 1.4rem;
+}
+
+.contact-info {
+    display: flex;
+    gap: 40px; 
+}
+
+.email-btn {
+    border: 1px solid rgb(127, 172, 255);
+    border-radius: 15px;
+    width: 300px;
+    height: 45px;
+    font-size: 1.3rem;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-left: 40px;
+}
+
+#number-btn {
+    border: 1px solid rgb(127, 172, 255);
+    border-radius: 15px;
+    width: 300px;
+    height: 50px;
+    font-size: 1.5rem;
 }
