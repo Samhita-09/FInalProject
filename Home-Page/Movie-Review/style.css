@@ -194,3 +194,7 @@ footer p {
     border: 2px solid rgb(127, 172, 255);
     box-shadow: 0 2px 4px rgb(79, 106, 157);
 }
+
+button:hover {
+    cursor: pointer;
+}
