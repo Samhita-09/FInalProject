@@ -151,7 +151,8 @@ footer p {
     gap: 40px; 
 }
 
-.email-btn {
+#email1-btn,
+#email2-btn {
     border: 1px solid rgb(127, 172, 255);
     border-radius: 15px;
     width: 300px;
@@ -212,7 +213,8 @@ button:hover {
         gap: 1rem;
     }
 
-    .email-btn,
+    #email1-btn,
+    #email2-btn,
     #number-btn {
         width: 90%;
         margin-left: 0;
@@ -222,4 +224,3 @@ button:hover {
         margin: 0 auto;
     }
 }
-
