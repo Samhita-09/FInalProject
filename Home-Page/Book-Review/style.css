@@ -153,8 +153,7 @@ footer p {
     display: flex;
     gap: 40px; 
 }
-
-.email-btn {
+.btn {
     border: 1px solid rgb(127, 172, 255);
     border-radius: 15px;
     width: 300px;
@@ -196,5 +195,90 @@ footer p {
 }
 
 button:hover {
+    cursor: pointer;
+}
+
+/* AI used for responsive screen */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .form-input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .feature-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .welcome {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #email1-btn,
+    #email2-btn,
+    #number-btn {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    footer p {
+        margin: 0 auto;
+    }
+
+    .addReview{
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin: 0 auto;
+
+    }
+}
+
+.addreview {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.review-book-title,
+.review-author,
+.review-paragraph,
+.rating {
+    font-size: 20px;
+    margin-bottom: 23px;
+    border-radius: 5px;
+}
+
+.rating {
+    display: inline;
+    font-size: 25px;
+}
+
+.rating:hover {
     cursor: pointer;
 }

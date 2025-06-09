@@ -35,56 +35,75 @@
     <h1 class="welcome">Book Reviews!</h1>
 
     <h2 class="description">Leave a review for your favorite (or least favorite) book below.</h2>
+    
+    <form action="" class="userReview">
+        <div class="addreview">
+            <p>Book Title: <input type="text" class="review-book-title"></p>
 
-    <button class="addReview"><i class="fa-solid fa-plus"></i>Add your review</button>
+            <p>Author: <input type="text" class="review-author"></p>
 
+            <p class="rating"><i class="fa-regular fa-star" onclick="rate()"></i></p>
+            <p class="rating"><i class="fa-regular fa-star" onclick="rate()"></i></p>
+            <p class="rating"><i class="fa-regular fa-star" onclick="rate()"></i></p>
+            <p class="rating"><i class="fa-regular fa-star" onclick="rate()"></i></p>
+            <p class="rating"><i class="fa-regular fa-star" onclick="rate()"></i></p>
+
+            <p>Review:<input type="text" class="review-paragraph"></p>
+        </div>
+    </form>
+
+    <button type="submit" class="addReview"><i class="fa-solid fa-plus"></i>Add your review</button>
+    
     <div class="feature-container">
         <div class="feature-card">
             <h1 class="book-title">The Midnight Library</h1>
+            <h2 class="author">Matt Haig</h2>
             <div class="star">
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></i></p>
             </div>
             <p class="review">Matt Haig's The Midnight Library is a moving exploration of regret and second chances, centered on Nora Seed's journey through alternate lives in a mystical library. The book blends philosophy and fiction in an accessible, emotionally resonant way. While the premise becomes predictable at times, the hopeful message is powerful. A great read for fans of introspective, uplifting stories.</p>
         </div>
         <div class="feature-card">
             <h1 class="book-title">Ashes of the Emerald Throne</h1>
+            <h2 class="author">Fernanda Santo</h2>
             <div class="star">
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></i></p>
                 <p><i class="fa-regular fa-star"></i></p>
             </div>
             <p class="review">A richly built fantasy world filled with political intrigue, ancient magic, and a brooding fire mage on the run. The lore is deep and immersive, though the dense terminology takes some getting used to. Kaelen’s character arc is a standout — tragic, powerful, and morally complex. Perfect for fans of dark, character-driven fantasy.</p>
         </div>
         <div class="feature-card">
             <h1 class="book-title">The Clockmaker's Paradox</h1>
+            <h2 class="author">Dustin Holzberger</h2>
             <div class="star">
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
             </div>
             <p class="review">A brilliantly crafted, time-bending sci-fi novel that blends theoretical physics with raw emotion. Lena, a physicist mourning her daughter, creates a device to rewind time — but discovers something far more dangerous. The pacing is tight and the plot twists are genuinely surprising. It’s smart, emotional, and lingers long after the final page.</p>
         </div>
     </div>
 
-   <footer class="footer">
+    <footer class="footer">
         <h2 class="footer-title">Contact Us!</h2>
         <div class="contact-info">
             <p id="email">Email Address:</p>
-            <button class="email-btn" onclick="copyEmail()">samkal28@bergen.org</button>
-            <button class="email-btn" onclick="copyEmail()">julzag28@bergen.org</button>
+            <button id="email1-btn" class="btn" onclick="copyEmail1()">samkal28@bergen.org</button>
+            <button id="email2-btn" class="btn" onclick="copyEmail2()">julzag28@bergen.org</button>
             <p id="number">Phone Number:</p>
-            <button id="number-btn">(551) 123-4567</button>
+            <button id="number-btn" class="btn" onclick="copyNumber()">(551) 123-4567</button>
         </div>
    </footer>
 
-    <script src="script.js"></script>
+    <script src="bookreview.js"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@
 <body>
     <nav>
         <ul>
-            <li class="title"><a href="/Home-Page/index.html">Rated and Review</a></li>
+            <li class="title"><a href="/Home-Page/index.html">Rated and Reviewed</a></li>
             <li>
                 <form id="item-form">
                     <div class="form-control">
@@ -22,6 +22,7 @@
                         name="item"
                         placeholder="Search"
                         />
+                        
                     </div>
                 </form>
             </li>
@@ -39,51 +40,51 @@
 
     <div class="feature-container">
         <div class="feature-card">
-            <h1>Barbie</h1>
+            <h1 class="movie-title">Barbie</h1>
             <div class="star">
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></i></p>
             </div>
             <p class="review">Barbie is colorful, clever, and surprisingly emotional. Margot Robbie shines in a role that balances fun with depth. It’s a movie about identity, expectations, and pink — lots of pink. Smart, funny, and worth the hype.</p>
         </div>
         <div class="feature-card">
-            <h1>The Marvels</h1>
+            <h1 class="movie-title">The Marvels</h1>
             <div class="star">
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></i></p>
                 <p><i class="fa-regular fa-star"></i></p>
             </div>
             <p class="review">A fast, fun Marvel adventure with solid team chemistry. Kamala Khan (Iman Vellani) brings most of the charm. The plot moves quickly, sometimes too quickly, but it’s light and entertaining. Great for a fun movie night.</p>
         </div>
         <div class="feature-card">
-            <h1>Wish</h1>
+            <h1 class="movie-title">Wish</h1>
             <div class="star">
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></i></p>
                 <p><i class="fa-regular fa-star"></i></p>
             </div>
             <p class="review">A classic Disney-style story with a modern look and message. Asha is a strong and likable lead, and the songs are uplifting. The animation is unique and visually sweet. It’s not groundbreaking, but it’s warm and magical.</p>
         </div>
     </div>
-
-   <footer class="footer">
+  
+    <footer class="footer">
         <h2 class="footer-title">Contact Us!</h2>
         <div class="contact-info">
             <p id="email">Email Address:</p>
-            <button class="email-btn" onclick="copyEmail()">samkal28@bergen.org</button>
-            <button class="email-btn" onclick="copyEmail()">julzag28@bergen.org</button>
+            <button id="email1-btn" class="btn" onclick="copyEmail1()">samkal28@bergen.org</button>
+            <button id="email2-btn" class="btn" onclick="copyEmail2()">julzag28@bergen.org</button>
             <p id="number">Phone Number:</p>
-            <button id="number-btn">(551) 123-4567</button>
+            <button id="number-btn" class="btn" onclick="copyNumber()">(551) 123-4567</button>
         </div>
    </footer>
 
-    <script src="script.js"></script>
+    <script src="moviereview.js"></script>
 </body>
 </html>

@@ -40,3 +40,29 @@ function copyEmail2() {
         emailButton2.textContent = "julzag28@bergen.org"
     }, 2000)
 }
+
+const itemList = document.querySelector(".product-title")
+const searchbar = document.querySelector("#item-input")
+
+function filterItems(e) {
+    const text = e.target.value.toLowerCase()
+    const items = document.querySelectorAll(".product-title")
+
+    items.forEach(item => {
+        const itemName = item.textContent.toLowerCase()
+        const card = item.closest(".feature-card") // used chatgpt bc when we did it, it just showed the title and not the wholoe card
+        if (itemName.includes(text)) {
+            card.style.display = 'block'
+        }
+        else {
+            card.style.display = 'none'
+        }
+    })
+}
+
+function initApp() {
+    // Filter event
+    searchbar.addEventListener('input', filterItems)
+}
+
+initApp()

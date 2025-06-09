@@ -10,7 +10,7 @@
 <body>
     <nav>
         <ul>
-            <li class="title"><a href="/Home-Page/index.html">Rated and Review</a></li>
+            <li class="title"><a href="/Home-Page/index.html">Rated and Reviewed</a></li>
             <li>
                 <form id="item-form">
                     <div class="form-control">
@@ -39,33 +39,33 @@
 
     <div class="feature-container">
         <div class="feature-card">
-            <h1>CeraVe Daily Moisturizing Lotion</h1>
+            <h1 class="product-title">CeraVe Daily Moisturizing Lotion</h1>
             <div class="star">
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></i></p>
             </div>
             <p class="review">I've been using this lotion for weeks, and it's been a game-changer for my dry skin. It's lightweight, non-greasy, and absorbs quickly. The formula feels gentle and works well even on sensitive skin. I just wish it had a version with SPF included.</p>
         </div>
         <div class="feature-card">
-            <h1>Sony WH-1000XM5 Noise-Canceling Headphones</h1>
+            <h1 class="product-title">Sony WH-1000XM5 Noise-Canceling Headphones</h1>
             <div class="star">
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></i></p>
                 <p><i class="fa-regular fa-star"></i></p>
             </div>
             <p class="review">These headphones deliver incredible sound quality and top-tier noise cancellation. They're comfortable for long listening sessions and the battery life easily lasts all day. The touch controls take a little getting used to but are convenient once mastered. Definitely worth the investment for music lovers or frequent travelers.</p>
         </div>
         <div class="feature-card">
-            <h1> Product: iRobot Roomba i3+ EVO Vacuum</h1>
+            <h1 class="product-title">iRobot Roomba i3+ EVO Vacuum</h1>
             <div class="star">
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
-                <p><i class="fa-regular fa-star"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+                <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
                 <p><i class="fa-regular fa-star"></i></p>
                 <p><i class="fa-regular fa-star"></i></p>
             </div>
@@ -77,13 +77,13 @@
         <h2 class="footer-title">Contact Us!</h2>
         <div class="contact-info">
             <p id="email">Email Address:</p>
-            <button class="email-btn" onclick="copyEmail()">samkal28@bergen.org</button>
-            <button class="email-btn" onclick="copyEmail()">julzag28@bergen.org</button>
+            <button id="email1-btn" class="btn" onclick="copyEmail1()">samkal28@bergen.org</button>
+            <button id="email2-btn" class="btn" onclick="copyEmail2()">julzag28@bergen.org</button>
             <p id="number">Phone Number:</p>
-            <button id="number-btn">(551) 123-4567</button>
+            <button id="number-btn" class="btn" onclick="copyNumber()">(551) 123-4567</button>
         </div>
    </footer>
 
-    <script src="script.js"></script>
+    <script src="productreview.js"></script>
 </body>
 </html>
