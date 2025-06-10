@@ -58,6 +58,46 @@ function filterItems(e) {
     })
 }
 
+// rating
+
+// Store the user's selected rating
+let currentRating = 0;
+
+// Make the stars clickable
+function rate() {
+    const stars = document.querySelectorAll(".userReview .fa-star");
+
+    stars.forEach((star, index) => {
+        star.addEventListener("click", () => {
+            currentRating = index + 1;
+            updateStarVisuals(stars, currentRating);
+        });
+
+        star.addEventListener("mouseover", () => {
+            updateStarVisuals(stars, index + 1);
+        });
+
+        star.addEventListener("mouseout", () => {
+            updateStarVisuals(stars, currentRating);
+        });
+    });
+}
+
+// Update star colors based on rating
+function updateStarVisuals(stars, rating) {
+    stars.forEach((star, index) => {
+        if (index < rating) {
+            star.classList.remove("fa-regular");
+            star.classList.add("fa-solid");
+            star.style.color = "#FFD43B";
+        } else {
+            star.classList.remove("fa-solid");
+            star.classList.add("fa-regular");
+            star.style.color = "";
+        }
+    });
+}
+
 const addBtn = document.querySelector(".addReview")
 const bookTitle = document.querySelector(".review-book-title")
 const bookAuthor = document.querySelector(".review-author")
@@ -93,15 +133,30 @@ function addReview() {
             `<h1 class="book-title">${newTitle}</h1>
             <h2 class="author">${newAuthor}</h2>
             <div class="star">
-                <p class="rating"><i class="fa-regular fa-star""></i></p>
-                <p class="rating"><i class="fa-regular fa-star""></i></p>
-                <p class="rating"><i class="fa-regular fa-star""></i></p>
-                <p class="rating"><i class="fa-regular fa-star""></i></p>
-                <p class="rating"><i class="fa-regular fa-star""></i></p>
+                ${[1, 2, 3, 4, 5].map(i =>
+                    `<p class="rating"><i class="fa-${i <= currentRating ? 'solid' : 'regular'} fa-star" style="color: ${i <= currentRating ? '#FFD43B' : ''};"></i></p>`
+                ).join('')}
             </div>
             <p class="review">${newReview}</p>`
             document.querySelector(".feature-container").appendChild(div)
     }
+    const form = document.querySelector(".userReview")
+    form.innerHTML = 
+    `<div class="addreview">
+            <p>Book Title: <input type="text" class="review-book-title"></p>
+
+            <p>Author: <input type="text" class="review-author"></p>
+
+            <p class="rating"><i class="fa-regular fa-star" onclick="rate()"></i></p>
+            <p class="rating"><i class="fa-regular fa-star" onclick="rate()"></i></p>
+            <p class="rating"><i class="fa-regular fa-star" onclick="rate()"></i></p>
+            <p class="rating"><i class="fa-regular fa-star" onclick="rate()"></i></p>
+            <p class="rating"><i class="fa-regular fa-star" onclick="rate()"></i></p>
+
+            <p>Review:<input type="text" class="review-paragraph"></p>
+        </div>`
+        rate();
+
 }
 
 function initApp() {
