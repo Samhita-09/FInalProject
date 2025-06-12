@@ -37,11 +37,28 @@
 
     <h2 class="description">Leave a review for your favorite (or least favorite) movie below.</h2>
 
+    <form action="" class="userReview">
+        <div class="addreview">
+            <p>Movie Title: <input type="text" class="review-movie-title"></p>
+
+            <p>Actors: <input type="text" class="review-movie"></p>
+
+                <p class="rating"><i class="fa-regular fa-star" onclick="rate()"></i></p>
+                <p class="rating"><i class="fa-regular fa-star" onclick="rate()"></i></p>
+                <p class="rating"><i class="fa-regular fa-star" onclick="rate()"></i></p>
+                <p class="rating"><i class="fa-regular fa-star" onclick="rate()"></i></p>
+                <p class="rating"><i class="fa-regular fa-star" onclick="rate()"></i></p>
+
+            <p>Review: <input type="text" class="review-paragraph"></p>
+        </div>
+    </form>
+
     <button class="addReview"><i class="fa-solid fa-plus"></i>Add your review</button>
 
     <div class="feature-container">
         <div class="feature-card">
             <h1 class="movie-title">Barbie</h1>
+            <h2 class="movie">Margot Robbie, Ryan Gosling</h2>
             <div class="star">
                 <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
                 <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
@@ -53,6 +70,7 @@
         </div>
         <div class="feature-card">
             <h1 class="movie-title">The Marvels</h1>
+            <h2 class="movie">Kamala Khan</h2>
             <div class="star">
                 <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
                 <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
@@ -64,6 +82,7 @@
         </div>
         <div class="feature-card">
             <h1 class="movie-title">Wish</h1>
+            <h2 class="movie">Chris Pine, Ariana Debose</h2>
             <div class="star">
                 <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
                 <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>

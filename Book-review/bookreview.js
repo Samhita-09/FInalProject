@@ -5,9 +5,8 @@ const emailButton2 = document.querySelector("#email2-btn")
 const numberButton = document.querySelector("#number-btn")
 
 function copyEmail1() {
-    // AI helped for this part
     navigator.clipboard.writeText(emailButton1.textContent)
-    .then(() => {
+    .then(() => { // AI used just for this '.then' line
         emailButton1.textContent = "Copied!"
     })
 
@@ -58,7 +57,7 @@ function filterItems(e) {
     })
 }
 
-// rating
+// rating - done using AI because we weren't able to do it on our own
 
 // Store the user's selected rating
 let currentRating = 0;
@@ -97,17 +96,16 @@ function updateStarVisuals(stars, rating) {
         }
     });
 }
+// AI usage is over with the above line
 
 const addBtn = document.querySelector(".addReview")
 const bookTitle = document.querySelector(".review-book-title")
 const bookAuthor = document.querySelector(".review-author")
-// const bookRating = document.querySelector(".rating")
 const bookReview = document.querySelector(".review-paragraph")
 
 function addReview() {
     const newTitle = bookTitle.value.trim()
     const newAuthor = bookAuthor.value.trim()
-    // const newRating = bookRating.value.trim()
     const newReview = bookReview.value.trim()
 
     if (newTitle === "") {
@@ -118,10 +116,6 @@ function addReview() {
         alert("Please enter your book's author!")
         return
     }
-    // else if (newRating === "") {
-    //     alert("Please enter your rating!")
-    //     return
-    // }
     else if (newReview === "") {
         alert("Please enter your book review!")
         return
@@ -130,6 +124,7 @@ function addReview() {
         const div = document.createElement("div")
         div.classList.add("feature-card")
         div.innerHTML =
+            // Disclaimer: AI used just for lines 131-134
             `<h1 class="book-title">${newTitle}</h1>
             <h2 class="author">${newAuthor}</h2>
             <div class="star">
@@ -156,10 +151,75 @@ function addReview() {
             <p>Review:<input type="text" class="review-paragraph"></p>
         </div>`
         rate();
+        addCardToStorage();
+}
 
+// local storage
+
+const cardContainer = document.querySelector(".feature-container")
+
+function getItemsFromStorage() {
+    let cards = localStorage.getItem("cards");
+    return cards ? JSON.parse(cards) : [];
+}
+
+function addCardToStorage() {
+    const cardDetails = {
+        title: bookTitle.value,
+        author: bookAuthor.value,
+        rating: currentRating,
+        review: bookReview.value
+    }
+
+    const cards = getItemsFromStorage();
+    cards.push(cardDetails);
+    localStorage.setItem('cards', JSON.stringify(cards));
+}
+
+function loadFromLocalStorage() {
+    const cards = getItemsFromStorage();
+
+    cards.forEach(card => {
+        const div = document.createElement("div");
+        div.classList.add("feature-card");
+        div.innerHTML = `
+            <h1 class="book-title">${card.title}</h1>
+            <h2 class="author">${card.author}</h2>
+            <div class="star">
+                ${[1, 2, 3, 4, 5].map(i =>
+                    `<p class="rating"><i class="fa-${i <= card.rating ? 'solid' : 'regular'} fa-star" style="color: ${i <= card.rating ? '#FFD43B' : ''};"></i></p>`
+                ).join('')}
+            </div>
+            <p class="review">${card.review}</p>`;
+        document.querySelector(".feature-container").appendChild(div);
+    });
+}
+
+
+function displayItems() {
+    const cards = getItemsFromStorage();
+
+    cards.forEach(card => {
+        const div = document.createElement("div");
+        div.classList.add("feature-card");
+        div.innerHTML = `
+            <h1 class="book-title">${card.title}</h1>
+            <h2 class="author">${card.author}</h2>
+            <div class="star">
+                ${[1, 2, 3, 4, 5].map(i =>
+                    `<p class="rating"><i class="fa-${i <= card.rating ? 'solid' : 'regular'} fa-star" style="color: ${i <= card.rating ? '#FFD43B' : ''};"></i></p>`
+                ).join('')}
+            </div>
+            <p class="review">${card.review}</p>`;
+        document.querySelector(".feature-container").appendChild(div);
+    });
 }
 
 function initApp() {
+    // Local storage
+    // localStorage.clear()
+    loadFromLocalStorage()
+
     // Filter event
     searchbar.addEventListener('input', filterItems)
 

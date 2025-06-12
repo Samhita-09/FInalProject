@@ -82,7 +82,8 @@ nav ul {
 }
 
 .feature-container {
-    display: flex; 
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
@@ -153,7 +154,6 @@ footer p {
     display: flex;
     gap: 40px; 
 }
-
 .btn {
     border: 1px solid rgb(127, 172, 255);
     border-radius: 15px;
@@ -178,18 +178,16 @@ footer p {
 }
 
 .feature-card p.review {
-    font-size: 28px;
+    font-size: 21px;
 }
 
 .addReview {
-    text-align: center;
     display: block;
-    justify-content: center;
     font-size: 25px;
     border-radius: 5px;
     width: 250px;
     height: 40px;
-    margin-left: 685px;
+    margin: auto;
     background-color: white;
     border: 2px solid rgb(127, 172, 255);
     box-shadow: 0 2px 4px rgb(79, 106, 157);
@@ -198,6 +196,7 @@ footer p {
 button:hover {
     cursor: pointer;
 }
+
 /* AI used for responsive screen */
 @media (max-width: 768px) {
     nav ul {
@@ -247,7 +246,6 @@ button:hover {
         margin: 0 auto;
     }
 
-    
     .addReview{
         text-align: center;
         flex-direction: column;
@@ -256,4 +254,78 @@ button:hover {
         margin: 0 auto;
 
     }
+
+    .userReview {
+        display: flex;
+        justify-content: center;
+        margin: 2rem auto;
+      }
+      
+      .addreview {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        max-width: 500px;
+        padding: 1rem;
+        box-sizing: border-box;
+      }
+      
+      .addreview p {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        margin: 0;
+      }
+      
+      .addreview input {
+        padding: 0.5rem;
+        font-size: 1rem;
+       
+      }
+      
+      .rating {
+       display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        margin-top: 0.5rem;
+        flex-direction: row;
+      }
+      
+      .rating i {
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      .rating p {
+        display: block;
+      }
 }
+
+
+.addreview {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.review-movie-title,
+.review-movie,
+.review-paragraph,
+.rating {
+    font-size: 20px;
+    margin-bottom: 23px;
+    border-radius: 5px;
+}
+
+.rating {
+    display: inline;
+    font-size: 25px;
+}
+
+.rating:hover {
+    cursor: pointer;
+}
+
