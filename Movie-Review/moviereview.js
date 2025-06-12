@@ -158,7 +158,7 @@ function addReview() {
 const cardContainer = document.querySelector(".feature-container")
 
 function getItemsFromStorage() {
-    let cards = localStorage.getItem("cards");
+    let cards = localStorage.getItem("movie-cards");
     return cards ? JSON.parse(cards) : [];
 }
 
@@ -172,7 +172,7 @@ function addCardToStorage() {
 
     const cards = getItemsFromStorage();
     cards.push(cardDetails);
-    localStorage.setItem('cards', JSON.stringify(cards));
+    localStorage.setItem('movie-cards', JSON.stringify(cards));
 }
 
 function loadFromLocalStorage() {
